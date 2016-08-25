@@ -1,0 +1,20 @@
+$mask-z-index: 1000;
+.easy-modal-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transition: background .5s ease-out;
+
+    &.show {
+        z-index: $mask-z-index;
+        background: rgba(0, 0, 0, .5);
+    }
+    &.hide {
+        z-index: -1;
+        background: transparent;
+        background: rgba(255, 255, 255, 0);
+    }
+}
